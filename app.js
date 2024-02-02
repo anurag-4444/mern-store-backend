@@ -8,9 +8,7 @@ import cookieParser from "cookie-parser";
 import order from "./routes/orderRoute.js"
 import fileUpload from "express-fileupload";
 import bodyParser from "body-parser";
-import path from 'path'
 import cors from 'cors'
-import { fileURLToPath } from "url";
 
 const app = express();
 
@@ -23,9 +21,9 @@ const app = express();
 
 // app.use(cors())
 app.use(cors({
-    origin: 'http://localhost:3000', // Specify the origin of your frontend
-    credentials: true, // Allow credentials (cookies)
-  }));
+  origin: ['http://localhost:3000', 'https://mern-store-frontend-aqmf.onrender.com'], // Specify the origin of your frontend
+  credentials: true, // Allow credentials (cookies)
+}));
 
 
 // app.use((req, res, next) => {
